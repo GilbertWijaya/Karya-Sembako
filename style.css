@@ -1,0 +1,142 @@
+/* global responsive */
+
+/* navbar section */
+.sec-navbar .navbar{
+    z-index: 1;
+}
+
+.navbar-brand{
+    font-family: Viga;
+    font-size: 32px;
+}
+
+.nav-link{
+    font-weight: 500;
+    margin-right: 30px;
+    color: black;
+}
+
+
+/* hero section */
+.card{
+    background-size: cover;
+    text-align: center;
+    /* position: relative; */
+}
+
+.hero .card::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1) , rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+.hero .card .card-txt{
+    z-index: 1;
+}
+
+.card-txt span{
+    font-weight: 700;
+}
+
+.info-pnl .hd-p{
+    margin-top: 50px;
+    text-align: center;
+    font-family: Viga;
+    font-size: 32px;
+}
+
+/* testimonial */
+
+.testimonial {
+    font-family: Viga;
+    font-size: 32px;
+    font-weight: 100;
+    margin-top: 100px;
+}
+
+.testimonial .hd-p span{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* footer */
+.cr{
+    width: auto;
+    height: 75px;
+    background-color: black;
+    margin-top: 150px;
+}
+
+.cr p{
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+/* utilities */
+.tombol{
+    border-radius: 50px;
+    color: white;
+}
+
+
+
+/* desktop responsive */
+@media (min-width: 992px) {
+    .nav-link{
+        text-transform: uppercase;
+    }
+    
+    .navbar-brand{
+        font-size: 32px;
+        text-transform: uppercase;
+    }
+
+    .navbar-brand, .nav-link{
+        color: white;
+        text-shadow: 1px 1px 1px rgb(0, 0, 0,0.7);
+    }
+
+    .navbar-brand:hover, .nav-link:hover{
+        color: white !important;
+    }
+
+    .nav-link:hover::after{
+        content: "";
+        display: block;
+        border-bottom: 3px solid blue;
+        width: 50%;
+        padding-bottom: 5px;
+        margin: auto;
+        margin-bottom: -8px;
+        /* menggunakan mb: -8px untuk mencegah setiap elemen yang disorot bergeser keatas yang dipengaruhi oleh pb:5px dan border-bottom:3px */
+        transition: 1s;
+    }
+
+    .card img{
+        margin-top: -75px;
+    }
+
+    .card .card-title{
+        margin-top: 120px;
+    }
+
+    .card .card-title h1{
+        font-family: Viga;
+        font-size: 42;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        font-weight: 200;
+    }
+    
+    .card .card-title span{
+        font-family: Viga;
+        font-size: 50px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        font-weight: 700;
+    }
+
+}
+
+
